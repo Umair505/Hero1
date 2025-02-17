@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Marck+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.work-sans-font {
+    font-family: "Work Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Shared Style  */
+.bg-light{
+    background: rgba(255, 144, 14, 0.1);
+}
+.display-flex{
+    display: flex;
+}
+/* Dark 02 */
+.text-gray{
+    color: rgb(66, 66, 66);
+}
+/* Dark 03 */
+.text-light-gray{
+    color: rgb(114, 114, 114);
+}
+.section-title{
+    font-weight: 700;
+    font-size: 3.18rem;
+}
+.title{
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+.para{
+    font-size: 0.9rem;
+    color: #727272;
+    margin-bottom: 20px;
+}
+.btn-primary{
+    border-radius: 8px;
+    background: rgb(255, 144, 14);
+    padding: 18px 22px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btn-hover:hover{
+    background-color: #e75224
+}
+
+main{
+    max-width: 1152px;
+    margin: 0 auto;
+}
+main > section,footer{
+    margin-top: 130px;
+    margin-bottom: 100px;
+    max-width: 1152px;
+}
+.text-orange{
+    color: rgb(255, 144, 14);
+}
+/* Header style  */
+
+
+/* navbar related styles  */
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.brand{
+    font-weight: 700;
+    font-size: 2.1rem;
+}
+.nav-item{
+    list-style: none;
+    font-size: 1.1rem;
+    margin-right: 30px;
+}
+.nav-link{
+    text-decoration: none;
+    font-weight: 500;
+}
+.navbar,.banner{
+    max-width: 1152px;
+    margin: 0 auto;
+}
+/* Banner Related Styles */
+ .banner-content{
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;  
+    margin-bottom: 50px;
+}
+
+
+.banner-img{
+    width: 100%;
+    margin-bottom: 50px;
+}
+/* Team and Feature related style  */
+
+.feature-title{
+    font-size: 2.5rem;
+}
+.quick{
+    font-weight: 500;
+    color: rgb(114, 114, 114);
+}
+
+.teams{
+    margin-top: 50px;
+    align-items: center;
+    gap: 58px;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.our-features{
+    max-width: 425px;
+}
+
+
+/* Some Facts style  */
+.fact-card{
+    height: 240px;
+    width: 240px;
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 144, 14);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.fact-number{
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+.fact-name{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(114, 114, 114);
+    margin-top: 5px;
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+/* Sponsors Style */
+.sponsors-logo{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 50px;
+}
+.sponsors{
+    justify-content: center;
+    text-align: center;
+}
+.img-logo{
+    width: 120px;
+    height: 40px;
+    filter: grayscale(100%);
+}
+
+/* Footer */
+footer{
+    border-radius: 8px;
+    background: rgb(255, 244, 231);
+    justify-content: center;
+    text-align: center;
+    margin-left: 192px;
+}
+.footer-text{
+    padding: 30px 328px;
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+    font-weight: 400;
+    max-width: 90%;
+    word-wrap: break-word;
+}
+/* Feature Section 2 */
+#feature-title{
+    border-left: 5px solid rgb(255, 144, 14);
+    height: 84px;
+    padding-left: 18px;
+}
+.feature-card .feature-title{
+    font-weight: 600;
+    font-size: 1rem;
+
+}
+.feature-card{
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    background: rgb(255, 255, 255);
+    width: 468px;
+    height:136px ;
+    margin-bottom: 16px;
+}
+.features{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+.feature-architect img{
+    width: 100%;
+}
+.btn-year{
+    color: white;
+    background-color: rgb(255, 144, 14);
+    padding: 35px 33px;
+    border-radius: 8px;
+    border: none;
+    margin-left: -60px;
+    margin-top: -100px;
+}
+.btn-title{
+    font-weight: 700;
+    font-size: 3.25rem;
+    text-align: center;
+}
+.btn-sub{
+    font-weight: 500;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+
+/* Responsive Media Query */
+@media screen and (max-width: 576px) {
+    .navbar,.teams,.features{
+        flex-direction: column;
+    }
+    .team-img-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .our-features{
+        margin-left: 50px;
+    }
+    .facts-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-left: 48px;
+        gap: 20px;
+    
+    }
+    .some-facts{
+        justify-content: center;
+        text-align: center;
+    }
+    .sponsors-logo{
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+    }
+    footer {
+        margin: 20px auto;
+        padding: 20px;
+        background: none;
+        text-align: center;
+    }
+    
+    .footer-text {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+    .btn-year{
+        margin-left: 10px;
+    }
+    .feature-card{
+        justify-content: center;
+        text-align: center;
+        word-wrap: break-word;
+        
+    }
+    #feature-title{
+        text-align: center;
+    }
+    
+    
+}
+/* Medium Size Device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .facts-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-left: 20px;
+        gap: 10px;
+    }
+    .some-facts{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .sponsors-logo{
+        grid-template-columns: repeat(3,1fr);
+        gap: 50px;
+    }
+    footer {
+        margin: 10px auto;
+        padding: 10px;
+    }
+    
+    .footer-text {
+        font-size: 1rem;
+        padding: 10px;
+        line-height: 1.5;
+              
+    }
+}
+
+
