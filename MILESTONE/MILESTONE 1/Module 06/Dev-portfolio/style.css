@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Marck+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Open Sans", serif; */
+/* Nav Styles */
+
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-primary {
+    color: #FD6E0A;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    border: 0;
+    padding: 18px 35px;
+    height: 51px;
+    border-radius: 5px;
+    background: #FD6E0A;
+}
+
+.header {
+    background: #FFF8F3;
+    background-image: url('./images/header_bg.png'), url('./images/developer.png');
+    background-repeat: no-repeat;
+    background-position: bottom right, left;
+}
+
+/* header and navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 200px;
+}
+
+.nav-title {
+    font-weight: 800;
+    font-size: 36px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    margin-left: 50px;
+}
+
+/* banner styles */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.banner-cont{
+    margin-left: 190px;
+    width: 468px;
+    height: 285px;
+}
+
+.banner-title {
+    font-weight: 700;
+    font-size: 68px;
+}
+
+.banner-sub-title {
+    font-weight: 600;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.banner-description {
+    color: #757575;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+
+.section-title{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(24, 24, 24);
+    margin-bottom: 70px;
+}
+.section-description{
+    font-size: 16px;
+    color: rgb(117, 117, 117);
+    margin-top: 22px;
+}
+main{
+    max-width: 912px;
+    margin: 0 auto;
+}
+main section{
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+.about{
+    margin-top: 88px;
+    border-radius: 10px;
+    background: rgb(255, 248, 243);
+    padding: 104px 125px;
+    text-align: center;
+}
+.about-items{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 22px;
+}
+.item-description{
+    font-weight: 400;
+}
+.about-box{
+    border-color: black;
+    background:white;
+}
+.text-center{
+    text-align: center;
+}
+.skills-container{
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    margin-top: 38px;
+}
+.skills{
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+}
+.skill-title{
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.skill-description{
+    color: #757575;
+}
+.resume-container{
+    display: flex;
+    gap: 24px;
+}
+.experience-description{
+    color: rgb(117, 117, 117);
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 26px;
+}
+.experience-sub-title{
+    color: rgb(117, 117, 117);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 16px;
+}
+.experience-title{
+    color: rgb(71, 71, 71);
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0%;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.resume-column-title{
+    color: rgb(71, 71, 71);
+    font-family: Open Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 26px;
+}
+hr{
+    margin: 24px 0px;
+}
+footer{
+    background-color: rgb(255, 248, 243);
+    padding: 130px 230px;
+    display: flex;
+    gap: 100px;
+}
+.section-title2{
+    margin-bottom: 20px;
+    color: rgb(24, 24, 24);
+    font-family: Open Sans;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0%;
+}
+.footer-column{
+    width: 50%;
+}
+footer input[type="text"],footer input[type="email"],footer textarea{
+    width: 369px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: white;
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    margin-bottom: 20px;
+    border: none;
+}
+.footer-icon{
+    display: flex;
+    gap: 24px;
+    margin-top: 30px;
+}
