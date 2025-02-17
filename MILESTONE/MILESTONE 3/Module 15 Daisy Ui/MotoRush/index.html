@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoRush</title>
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--  Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .font-poppins{
+            font-family: "Poppins", serif;
+        }
+    </style>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            clifford: '#E76F51',
+            'bike-primary': '#E76F51',
+            'bike-primary-bg': 'rgba(231, 111, 81, 0.1)',
+            }
+        }
+        }
+    }
+    </script>
+</head>
+<body class="font-poppins">
+    <header class="md:container mx-auto">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>News</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                  <a class="font-bold text-2xl">MotoRush</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Contact</a></li>
+                    
+                  </ul>
+                </div>
+                <div class="">
+                  <a class="btn bg-bike-primary text-white">Login</a>
+                </div>
+              </div>
+        </nav>
+        <!-- Slider Carousel -->
+         <section>
+            <div class="carousel lg:h-[550px] w-full bg-bike-primary-bg">
+                <!-- Slide 1 -->
+                <div id="slide1" class="carousel-item relative w-full">
+                  <div class="flex lg:flex-row flex-col lg:p-24 p-12">
+                    <!-- Text -->
+                    <div class="space-y-7 flex-1">
+                        <h1 class="font-bold text-black text-5xl">Ride-on R15 V4 <br> with Smile</h1>
+                        <p class="text-gray-500">Amet minim mollit non deserunt ullamco 
+                        est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <div ><button class="btn bg-bike-primary  text-white">Purchase</button></div>
+                    </div>
+                    <!-- Image -->
+                    <div class="flex-1">
+                        <img src="images/slider/bike1.png" class="w-[406px]" />
+                    </div>
+                  </div>
+                  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div id="slide2" class="carousel-item relative w-full">
+                  <div class="flex lg:flex-row flex-col lg:p-24 p-12">
+                    <!-- Text -->
+                    <div class="space-y-7 flex-1">
+                        <h1 class="font-bold text-black text-5xl">Ride-on R15 V4 <br> with Smile</h1>
+                        <p class="text-gray-500">Amet minim mollit non deserunt ullamco 
+                        est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <div ><button class="btn bg-bike-primary  text-white">Purchase</button></div>
+                    </div>
+                    <!-- Image -->
+                    <div class="flex-1">
+                        <img src="images/slider/bike2.png" class="w-[406px]" />
+                    </div>
+                  </div>
+                  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div id="slide3" class="carousel-item relative w-full">
+                  <div class="flex lg:flex-row flex-col lg:p-24 p-12">
+                    <!-- Text -->
+                    <div class="space-y-7 flex-1">
+                        <h1 class="font-bold text-black text-5xl">Ride-on R15 V4 <br> with Smile</h1>
+                        <p class="text-gray-500">Amet minim mollit non deserunt ullamco 
+                        est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <div ><button class="btn bg-bike-primary  text-white">Purchase</button></div>
+                    </div>
+                    <!-- Image -->
+                    <div class="flex-1">
+                        <img src="images/slider/bike3.png" class="w-[406px]" />
+                    </div>
+                  </div>
+                  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                
+            </div>
+         </section>
+    </header>
+    <main class="md:container mx-auto">
+        <!-- Feature Bike Section  -->
+         <section></section>
+         <!-- Card Section -->
+          <section class="my-24 md:container">
+            <h1 class="mb-12 text-5xl font-bold text-center">Latest Bikes</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-3 lg:grid-cols-3  ">
+                <!-- card 1 -->
+                <div class="card bg-base-100 w-96 mt-5 shadow-xl">
+                    <figure>
+                      <img
+                        src="images/others/latest1.png"
+                        alt="Shoes" />
+                    </figure>
+                    <div class="card-body space-y-5">
+                      <h2 class="card-title">Ducati XDIAVEL S-73</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                      <div class="card-actions ">
+                        <button class="btn text-white bg-bike-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card 2 -->
+                <div class="card bg-base-100 w-96 mt-5 shadow-xl">
+                    <figure>
+                      <img
+                        src="images/others/latest2.png"
+                        alt="Shoes" />
+                    </figure>
+                    <div class="card-body space-y-5">
+                      <h2 class="card-title">Motorcycles & Scooters</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                      <div class="card-actions ">
+                        <button class="btn text-white bg-bike-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- card 3 -->
+                <div class="card bg-base-100 w-96 mt-5 shadow-xl">
+                    <figure>
+                      <img
+                        src="images/others/latest3.png"
+                        alt="Shoes" />
+                    </figure>
+                    <div class="card-body space-y-5">
+                      <h2 class="card-title">2021 Honda CBR500R</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, fermentum amet faucibus sed id nisi lectus at.</p>
+                      <div class="card-actions ">
+                        <button class="btn text-white bg-bike-primary">Read More</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </section>
+    </main>
+</body>
+</html>
