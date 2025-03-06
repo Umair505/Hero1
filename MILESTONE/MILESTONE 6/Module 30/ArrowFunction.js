@@ -11,3 +11,13 @@
 const add = (a,b) => a + b;
 
 console.log(add(1,2));
+
+const sqr = a =>a*a;
+
+console.log(sqr(5));
+
+document.getElementById("title").addEventListener("click",
+    () =>{
+        alert("Title Clicked");
+    }
+)
