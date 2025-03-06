@@ -16,3 +16,4 @@ console.log(max);
 //Find minimum value
 const min = Math.min(...numbers);
 console.log(min);
+

@@ -41,3 +41,13 @@ for(let [key,value] of Object.entries(person))
 {
     console.log(`key : ${key}  Value: ${value}`);
 }
+
+const obj = { foo: 1 };
+obj.bar = 2;
+console.log(obj)
+
+let a = 12, b = 3;
+
+[a, b] = [b, a];
+
+console.log(a, b); // Outputs: 3, 12
