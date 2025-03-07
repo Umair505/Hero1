@@ -18,3 +18,12 @@ const sqr = numbers.map(value =>{
     return value * value;
 })
 console.log(...sqr);
+
+const friends = ["a", "b", "c", "d", "e", "f"];
+const newFriends = friends.map((friend,index) => {
+    // console.log(friend);
+    console.log(index);
+    return friend;
+})
+
+console.log(...newFriends);
