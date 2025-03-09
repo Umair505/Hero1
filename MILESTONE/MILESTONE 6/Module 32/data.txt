@@ -1,0 +1,4 @@
+Data Type
+1-Primitive Type->Number,string,Boolean,Null,Undefined
+just store one type data
+2-Non-Primitive Type->object,array,functions,date,Regx
