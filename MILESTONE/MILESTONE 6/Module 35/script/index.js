@@ -10,7 +10,7 @@ function displayCategories(categories){
     const categoryContainer = document.getElementById("category-container");
     for(let cat of categories){
         const categoryDiv = document.createElement("div");
-        categoryDiv.innerHTML = `<button class="btn btn-sm">${cat.category}</button>`
+        categoryDiv.innerHTML = `<button class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${cat.category}</button>`
         categoryContainer.append(categoryDiv);
     }
 }
