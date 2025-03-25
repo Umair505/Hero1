@@ -22,4 +22,4 @@ const hideUser = () => console.log("User is not active");
 // Type conversions
 let num = "10";
 // +num;
-console.log(typeof +num);
+console.log(typeof +num); 

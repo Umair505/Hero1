@@ -22,6 +22,13 @@ function App() {
     </>
   )
 }
+function Student(){
+  return(
+    <div>
+      <h2>Hello, I am a student. My age is 15</h2>
+    </div>
+  )
+}
 function Person(){
   const age = 23;
   const name = "Moinul Islam"
