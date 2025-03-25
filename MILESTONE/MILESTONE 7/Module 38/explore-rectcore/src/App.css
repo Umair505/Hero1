@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+.student{
+  background-color: #f0f0f0;
+  padding: 1em;
+  border-radius: 8px;
+  margin: 1em 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: left;
+  color: black;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: #ddd;
+  }
+}
