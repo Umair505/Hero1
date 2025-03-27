@@ -17,7 +17,9 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <ToDo></ToDo>
+      <ToDo task="Learn React jsx" isDone={true}></ToDo>
+      <ToDo task="Revise JS" isDone={true}></ToDo>
+      <ToDo task="Revise Algo" isDone={false}></ToDo>
       {/* <Student></Student>
       <Developer name="Moinul" tech="Python"></Developer>
       <Developer name="Shabana" tech="Django"></Developer>
