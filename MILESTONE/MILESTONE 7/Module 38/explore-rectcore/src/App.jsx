@@ -21,9 +21,31 @@ function App() {
       <Developer name="Moinul" tech="Python"></Developer>
       <Developer name="Shabana" tech="Django"></Developer>
       <Person></Person>
+      <Player name="tamim" runs = "5000"></Player>
+      <Player name="Mushfiq" runs = "5000"></Player>
+      <Salami event="Roja Eid" amount="2000"></Salami>
+      <Salami event="Graduation" amount="1500"></Salami>
     </>
   )
 }
+function Salami({event,amount}){
+  return(
+    <div className='student'>
+      <p>Salami For : {event}</p>
+      <p>Amount : {amount}</p>
+    </div>
+  )
+}
+function Player({name,runs}){
+  return(
+    <div className='student'>
+      <h2>Hello, I am a player. My age is 25</h2>
+      <p>Name : {name}</p>
+      <p>Runs : {runs}</p>
+    </div>
+  )
+}
+// const {name,tech} = {name : 'John', tech :'35'}
 function Student(){
   return(
     <div className='student'>
