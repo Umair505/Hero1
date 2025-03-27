@@ -25,7 +25,18 @@ function App() {
       <Player name="Mushfiq" runs = "5000"></Player>
       <Salami event="Roja Eid" amount="2000"></Salami>
       <Salami event="Graduation" amount="1500"></Salami>
+      <Advice advice ="Always Be Humble"></Advice>
+      <Advice advice ="Every Soul must test death"></Advice>
     </>
+  )
+}
+function Advice({advice}){
+  return(
+    <div>
+      <h2>Advice:{advice}</h2>
+      <p>Do not forget to practice regularly</p>
+      <p>Stay motivated</p>
+    </div>
   )
 }
 function Salami({event,amount}){
