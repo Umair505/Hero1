@@ -17,7 +17,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <Student></Student>
+      {/* <Student></Student>
       <Developer name="Moinul" tech="Python"></Developer>
       <Developer name="Shabana" tech="Django"></Developer>
       <Person></Person>
@@ -26,7 +26,7 @@ function App() {
       <Salami event="Roja Eid" amount="2000"></Salami>
       <Salami event="Graduation" amount="1500"></Salami>
       <Advice advice ="Always Be Humble"></Advice>
-      <Advice advice ="Every Soul must test death"></Advice>
+      <Advice advice ="Every Soul must test death"></Advice> */}
     </>
   )
 }
