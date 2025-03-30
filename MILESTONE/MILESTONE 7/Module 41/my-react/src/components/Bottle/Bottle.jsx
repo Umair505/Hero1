@@ -8,6 +8,7 @@ const Bottle = ({bottle}) => {
             <h3>{name}</h3>
             <p>Price : ${price}</p>
             <p>Available : {stock}</p>
+            <button>Buy Now</button>
         </div>
     );
 };
