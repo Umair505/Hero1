@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "name": "Hydro Flask",
+      "capacity_ml": 1000,
+      "material": "Stainless Steel",
+      "color": "Black",
+      "price": 2500,
+      "brand": "Hydro Flask",
+      "is_insulated": true
+    },
+    {
+      "id": 2,
+      "name": "Nalgene Wide Mouth",
+      "capacity_ml": 950,
+      "material": "Plastic",
+      "color": "Blue",
+      "price": 1200,
+      "brand": "Nalgene",
+      "is_insulated": false
+    },
+    {
+      "id": 3,
+      "name": "CamelBak Eddy",
+      "capacity_ml": 750,
+      "material": "Tritan Plastic",
+      "color": "Purple",
+      "price": 1500,
+      "brand": "CamelBak",
+      "is_insulated": false
+    },
+    {
+      "id": 4,
+      "name": "S'well Traveler",
+      "capacity_ml": 470,
+      "material": "Stainless Steel",
+      "color": "White Marble",
+      "price": 3200,
+      "brand": "S'well",
+      "is_insulated": true
+    },
+    {
+      "id": 5,
+      "name": "Contigo Autoseal",
+      "capacity_ml": 700,
+      "material": "Plastic",
+      "color": "Red",
+      "price": 1800,
+      "brand": "Contigo",
+      "is_insulated": false
+    }
+  ]
+  
