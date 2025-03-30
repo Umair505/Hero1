@@ -3,8 +3,8 @@ import Bottle from '../Bottle/Bottle';
 import './bottles.css'
 const Bottles = ({bottlesPromise}) => {
     const [cart,setCart] = useState([])
-    const handleAddToCart =() =>{
-        console.log('add to cart');
+    const handleAddToCart =(bottle) =>{
+        console.log('add to cart',bottle.name);
     }
     const bottles = use(bottlesPromise);
     return (
