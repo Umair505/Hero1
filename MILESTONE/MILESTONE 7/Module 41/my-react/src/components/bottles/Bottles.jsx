@@ -1,11 +1,14 @@
 import React, { use, useState } from 'react';
 import Bottle from '../Bottle/Bottle';
 import './bottles.css'
+import { addToCartSto } from '../../utilities/LocalStorage.js/localStorage';
 const Bottles = ({bottlesPromise}) => {
     const [cart,setCart] = useState([])
     const handleAddToCart =(bottle) =>{
         const newCart = [...cart,bottle];
         setCart(newCart);
+        addToCartSto(bottle.id);
+        // Save the bottle id into the storage
     }
     const bottles = use(bottlesPromise);
     return (
