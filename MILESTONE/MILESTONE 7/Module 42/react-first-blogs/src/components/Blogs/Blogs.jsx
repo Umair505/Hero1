@@ -13,7 +13,7 @@ const Blogs = () => {
     return (
         <div>
             <h1 className='text-3xl'>Total : {blogs.length}</h1>
-            <div className='all-blogs'>
+            <div className='all-blogs grid grid-cols-2 mt-5'>
                 {
                     blogs.map((blog) =><Blog blog={blog} ></Blog>)
                 }
