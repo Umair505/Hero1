@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "cover": "https://via.placeholder.com/600x400/0088ff/ffffff?text=React",
+      "title": "Mastering React State Management",
+      "author": "Emily Johnson",
+      "author_img": "https://via.placeholder.com/150/0088ff/ffffff?text=EJ",
+      "posted_date": "2025-04-01",
+      "reading_time": 9,
+      "hashtags": ["mid_level", "react"]
+    },
+    {
+      "id": 2,
+      "cover": "https://via.placeholder.com/600x400/00aa55/ffffff?text=JavaScript",
+      "title": "Advanced JavaScript Patterns",
+      "author": "Michael Chen",
+      "author_img": "https://via.placeholder.com/150/00aa55/ffffff?text=MC",
+      "posted_date": "2025-03-28",
+      "reading_time": 12,
+      "hashtags": ["advanced", "javascript"]
+    },
+    {
+      "id": 3,
+      "cover": "https://via.placeholder.com/600x400/ff8800/ffffff?text=CSS",
+      "title": "CSS Grid in Modern Layouts",
+      "author": "Sarah Williams",
+      "author_img": "https://via.placeholder.com/150/ff8800/ffffff?text=SW",
+      "posted_date": "2025-03-20",
+      "reading_time": 7,
+      "hashtags": ["beginner", "css"]
+    },
+    {
+      "id": 4,
+      "cover": "https://via.placeholder.com/600x400/aa00ff/ffffff?text=Node.js",
+      "title": "Building Scalable Node.js APIs",
+      "author": "David Kim",
+      "author_img": "https://via.placeholder.com/150/aa00ff/ffffff?text=DK",
+      "posted_date": "2025-03-15",
+      "reading_time": 15,
+      "hashtags": ["mid_level", "node", "backend"]
+    },
+    {
+      "id": 5,
+      "cover": "https://via.placeholder.com/600x400/ff4444/ffffff?text=Vue",
+      "title": "Vue 3 Composition API Guide",
+      "author": "Lisa Wong",
+      "author_img": "https://via.placeholder.com/150/ff4444/ffffff?text=LW",
+      "posted_date": "2025-03-10",
+      "reading_time": 10,
+      "hashtags": ["mid_level", "vue"]
+    }
+  ]
