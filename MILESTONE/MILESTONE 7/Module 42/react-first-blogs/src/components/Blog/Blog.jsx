@@ -20,7 +20,7 @@ const Blog = ({blog,handleBookMarks,handleMarkAsRead}) => {
                     <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
                     <div className='flex'>
                     {
-                        blog.hashtags.map((hash) => <p>{hash}</p>)
+                        blog.hashtags.map((hash) => <p key={hash}>{hash}</p>)
                     }
                     </div>
                     <div className="card-actions justify-end">
