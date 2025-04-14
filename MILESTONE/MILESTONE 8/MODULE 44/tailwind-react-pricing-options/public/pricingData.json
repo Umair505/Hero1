@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Basic Plan",
+      "price": "$29/month",
+      "description": "Perfect for beginners looking to stay active and healthy.",
+      "features": [
+        "Access to all gym equipment",
+        "1 free fitness assessment",
+        "Locker room access",
+        "Open gym hours",
+        "Free Wi-Fi",
+        "Water station access"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Standard Plan",
+      "price": "$49/month",
+      "description": "Ideal for regular gym-goers who want a balanced experience.",
+      "features": [
+        "All Basic Plan features",
+        "5 group classes per month",
+        "Priority support",
+        "Shower facility access",
+        "Free guest pass once a month",
+        "Access to stretching area"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Elite Plan",
+      "price": "$79/month",
+      "description": "Designed for fitness enthusiasts who want it all.",
+      "features": [
+        "All Standard Plan features",
+        "Unlimited group classes",
+        "1 personal training session per month",
+        "Free nutrition consultation",
+        "Sauna and steam room access",
+        "Monthly progress tracking"
+      ]
+    }
+  ]
+  

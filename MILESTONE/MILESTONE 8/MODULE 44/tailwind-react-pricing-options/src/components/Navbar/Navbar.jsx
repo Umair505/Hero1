@@ -9,7 +9,7 @@ const navLinks = [
   ];
 const links =  navLinks.map(link => (
     <li key={link.id} className="flex mr-4">
-        <a href={link.path} className=" hover:text-blue-500">{link.name}</a>
+        <a href={link.path} className=" hover:text-black hover:bg-amber-400">{link.name}</a>
     </li>
 ))
   
@@ -20,9 +20,9 @@ const Navbar = () => {
             <span className='flex' onClick={()=>setOpen(!open)}>
                 { open ?<X className='md:hidden'></X> : <Menu className='md:hidden'></Menu>}
                 
-            <ul className='md:hidden'>
-                {links}
-            </ul>
+                <ul className={`md:hidden absolute bg-amber-200  text-black duration-1000 ${open ? 'top-8' : '-top-40'}`}>
+                    {links}
+                </ul>
                 <h1 className='ml-4'>My Nav</h1>
             </span>
             <ul className='md:flex hidden mr-2'>
