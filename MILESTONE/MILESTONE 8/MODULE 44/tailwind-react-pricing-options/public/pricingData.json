@@ -30,6 +30,7 @@
     {
       "id": 3,
       "name": "Elite Plan",
+      "popular": true,
       "price": "$79/month",
       "description": "Designed for fitness enthusiasts who want it all.",
       "features": [
