@@ -1,0 +1,92 @@
+[
+    {
+      "student_id": 1,
+      "name": "Alice",
+      "marks": {
+        "phy": 34,
+        "math": 12,
+        "Chemistry": 23
+      }
+    },
+    {
+      "student_id": 2,
+      "name": "Bob",
+      "marks": {
+        "phy": 45,
+        "math": 19,
+        "Chemistry": 32
+      }
+    },
+    {
+      "student_id": 3,
+      "name": "Charlie",
+      "marks": {
+        "phy": 29,
+        "math": 27,
+        "Chemistry": 18
+      }
+    },
+    {
+      "student_id": 4,
+      "name": "David",
+      "marks": {
+        "phy": 50,
+        "math": 35,
+        "Chemistry": 40
+      }
+    },
+    {
+      "student_id": 5,
+      "name": "Eva",
+      "marks": {
+        "phy": 38,
+        "math": 30,
+        "Chemistry": 25
+      }
+    },
+    {
+      "student_id": 6,
+      "name": "Frank",
+      "marks": {
+        "phy": 42,
+        "math": 22,
+        "Chemistry": 37
+      }
+    },
+    {
+      "student_id": 7,
+      "name": "Grace",
+      "marks": {
+        "phy": 27,
+        "math": 41,
+        "Chemistry": 19
+      }
+    },
+    {
+      "student_id": 8,
+      "name": "Henry",
+      "marks": {
+        "phy": 33,
+        "math": 15,
+        "Chemistry": 28
+      }
+    },
+    {
+      "student_id": 9,
+      "name": "Ivy",
+      "marks": {
+        "phy": 47,
+        "math": 24,
+        "Chemistry": 31
+      }
+    },
+    {
+      "student_id": 10,
+      "name": "Jack",
+      "marks": {
+        "phy": 39,
+        "math": 29,
+        "Chemistry": 21
+      }
+    }
+  ]
