@@ -29,12 +29,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'users2',
-        element: 
-        <Suspense fallback={<span>Loading.....</span>}>
-          <UsersTwo usersPromise={usersPromise}></UsersTwo>
-        </Suspense>,
-        
-
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users')
+          .then(res => res.json()),
+        element: (
+          <Suspense fallback={<span>Loading.....</span>}>
+            <UsersTwo usersPromise={usersPromise} />
+          </Suspense>
+        )
       }
     ]
   },
