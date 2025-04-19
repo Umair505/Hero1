@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+impr
 export default function Batsman(){
     let [runs,setRuns]= useState(0)
     const handleSingle = () =>{
