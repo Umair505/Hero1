@@ -6,7 +6,7 @@ const Hero = () => {
             <img src="/src/assets/banner.png" className='w-full mx-auto md:max-w-md' alt="" />
             <div>
                 <h1 className='text-4xl md:text-5xl lg:text-7xl font-thin text-center'>Browse,Search,View,Buy</h1>
-                <p className='text-center text-gray-500 mt-4'>Best place to browse, search, view details and purchase of top flagship phones of the current time -FlagshipFaceOff.</p>
+                <p className='text-center text-gray-500 mt-4'>Best place to browse, search, view details and purchase of top flagship phones <br /> of the current time -FlagshipFaceOff.</p>
                 <form className='flex flex-col md:flex-row justify-center items-center text-center mt-8 md:px-24'>
                     <input type="text" placeholder='Search Phone By Name'
                     className='md:mr-2 md:mb-0 bg-white border border-gray-300 rounded-xl shadow-md w-2/3 h-12 px-4 mb-3 focus:outline-none focus:shadow-outline' />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PhonesContainer = () => {
+const PhonesContainer = ({phones}) => {
     return (
         <div>
             
