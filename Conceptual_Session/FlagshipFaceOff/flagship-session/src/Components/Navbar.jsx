@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
 import { FaCartShopping } from "react-icons/fa6";
+import { MdBookmarkAdd } from "react-icons/md";
 const Navbar = () => {
     return (
         <>
@@ -13,8 +14,10 @@ const Navbar = () => {
                 <ul
                     tabIndex={0}
                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/'>Home</NavLink></li>
-                    <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/about'>About</NavLink></li>
+<li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/'>Home</NavLink></li>
+                <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/about'>About</NavLink></li>
+                <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/cart'><FaCartShopping size={20}/></NavLink></li>
+                <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/favorites'><MdBookmarkAdd size={20}/></NavLink></li>
                 </ul>
                 </div>
                 <Link to='/' className="font-bold text-xl">FlagshipFaceOff</Link>
@@ -24,8 +27,8 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">
                 <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/'>Home</NavLink></li>
                 <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/about'>About</NavLink></li>
-                <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/cart'><FaCartShopping /></NavLink></li>
-                <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/favorites'>Favorites</NavLink></li>
+                <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/cart'><FaCartShopping size={20}/></NavLink></li>
+                <li><NavLink className={({isActive})=> isActive? 'text-indigo-600':''} to='/favorites'><MdBookmarkAdd size={20}/></NavLink></li>
                 </ul>
             </div>
             </div>
