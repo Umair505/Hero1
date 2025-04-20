@@ -1,18 +1,15 @@
 import { createBrowserRouter } from "react-router";
-import App from "../App";
-import Test from "../Test";
-import Home from "../pages/Home";
 import MainLayout from "../layouts/MainLayout";
+import Favorites from "../pages/Favorites";
+import About from "../pages/About";
+import PhoneDetails from "../pages/PhoneDetails";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
-    // {
-    //     path: '*',
-    //     element: <h1 className='text-2xl text-red-400'>404 Not Found</h1>
-    // },
     {
       path: '/',
       Component: MainLayout,
-      errorElement: <h1 className='text-2xl text-red-400'>404 Not Found</h1>,
+      errorElement: <ErrorPage></ErrorPage>,
       children:[
         {
             path:'/',
@@ -20,19 +17,18 @@ const router = createBrowserRouter([
             element: <h1 className='text-2xl text-red-400'>Welcome Home</h1>
         },
         {
-          path: '/favorites',
-          Component:Test,
-          children:[
-            {
-              path: 'inside',
-              element: <h1 className='text-2xl text-red-400'>Inside</h1>
-            }
-          ]
+          path:'/about',
+          Component: About
         },
         {
-          path:'/about',
-          element: <h1 className='text-2xl text-red-400'>About</h1>
-        }
+            path: 'phone-details',
+            Component:PhoneDetails
+        },
+        {
+            path: '/favorites',
+            Component: Favorites
+        },
+        
       ]
     }
   ])
