@@ -1,0 +1,6 @@
+npm i react-router tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
+
+//plugins:tailwindcss()
+//css imports
+@import "tailwindcss";
+@plugin "daisyui";
