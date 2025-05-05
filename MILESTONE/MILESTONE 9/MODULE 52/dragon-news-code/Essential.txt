@@ -4,3 +4,7 @@ npm i react-router tailwindcss@latest @tailwindcss/vite@latest daisyui@latest
 //css imports
 @import "tailwindcss";
 @plugin "daisyui";
+
+//FOR DINAMIC UPDATE DATE
+npm i date-fns
+{format(new Date(),"EEEE , MMMM MM , yyyy")}//Monday , May 05 , 2025
