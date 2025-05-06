@@ -14,7 +14,7 @@ const NewsCard = ({ news }) => {
   } = news;
 
   return (
-    <div className="card bg-base-100 shadow-xl border border-gray-200 m-2">
+    <div className="card bg-base-100 shadow-xl border border-gray-200 ">
       {/* Header */}
       <div className="flex justify-between bg-base-200 items-start px-6 py-4 border-b">
         <div className="flex items-center gap-4">
