@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import user from "../assets/user.png";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Added for mobile menu
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false); // State for mobile menu
@@ -60,9 +60,9 @@ const Navbar = () => {
                     src={user} 
                     alt="User" 
                 />
-                <button className='btn btn-primary px-4 sm:px-6 md:px-10 py-2 text-sm md:text-base'>
+                <Link to="/auth/login" className='btn btn-primary px-4 sm:px-6 md:px-10 py-2 text-sm md:text-base'>
                     Login
-                </button>
+                </Link>
             </div>
 
             {/* Mobile Menu - Only shows on small screens when open */}
