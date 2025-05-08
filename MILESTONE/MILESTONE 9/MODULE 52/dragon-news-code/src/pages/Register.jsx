@@ -8,17 +8,17 @@ const Register = () => {
     e.preventDefault();
     console.log(e.target);
     const form = e.target;
-    const name = form.name.value;
+    // const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    const photUrl = form.photoUrl.value;
+    // const photUrl = form.photoUrl.value;
     createUser(email,password)
     .then(result =>{
       const user = result.user;
       setUser(user);
     })
     .catch((error) =>{
-      const errorCode = error.code;
+      // const errorCode = error.code;
       const errorMessage = error.message;
       alert(errorMessage);
     });

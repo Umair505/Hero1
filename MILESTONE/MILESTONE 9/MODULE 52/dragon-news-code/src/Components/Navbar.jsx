@@ -6,10 +6,18 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false); // State for mobile menu
-    const {user} = use(AuthContext);
+    const {user,logout} = use(AuthContext);
+    const handleLogout = ()=>{
+        logout().then(() =>{
+            alert("Logout successfully!")
+        })
+        .catch((error)=>{
+           console.log(error);
+        });
+    }
     return (
         <div className='flex justify-between items-center py-4 px-4 md:px-0'>
-            {/* <div className=''>{user && user.email}</div> */}
+            <div className=''>{user && user.email}</div>
             
             {/* Mobile Menu Button - Only shows on small screens */}
             <div className='md:hidden'>
@@ -63,9 +71,11 @@ const Navbar = () => {
                     src={userIcon} 
                     alt="User" 
                 />
-                <Link to="/auth/login" className='btn btn-primary px-4 sm:px-6 md:px-10 py-2 text-sm md:text-base'>
-                    Login
-                </Link>
+                {
+                    user ? (<button onClick={handleLogout} className='btn btn-primary px-4 sm:px-6 md:px-10 py-2 text-sm md:text-base'>Logout</button>):(<Link to="/auth/login" className='btn btn-primary px-4 sm:px-6 md:px-10 py-2 text-sm md:text-base'>
+                        Login
+                    </Link>)
+                }
             </div>
 
             {/* Mobile Menu - Only shows on small screens when open */}
