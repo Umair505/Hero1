@@ -5,6 +5,7 @@ import LatestNews from '../Components/LatestNews';
 import Navbar from '../Components/Navbar';
 import LeftAside from '../Components/Homelayout/LeftAside';
 import RightAside from '../Components/Homelayout/RightAside';
+import Footer from '../Components/Footer';
 
 
 const HomeLayouts = () => {
@@ -48,6 +49,9 @@ const HomeLayouts = () => {
         <RightAside />
         </aside>
       </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 };

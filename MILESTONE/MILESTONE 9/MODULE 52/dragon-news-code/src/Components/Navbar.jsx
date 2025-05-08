@@ -67,8 +67,8 @@ const Navbar = () => {
             {/* Login Section */}
             <div className='flex items-center gap-3'>
                 <img 
-                    className='h-8 w-8 rounded-full hidden sm:block' 
-                    src={userIcon} 
+                    className=' w-12 rounded-full hidden sm:block' 
+                    src={`${user ? user.photoURL : userIcon }`} 
                     alt="User" 
                 />
                 {
