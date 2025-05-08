@@ -27,10 +27,10 @@ const HomeLayouts = () => {
       <main className="w-11/12 mx-auto my-3 gap-5 grid grid-cols-1 md:grid-cols-12 relative">
         {/* Mobile Sidebar Trigger */}
         <div 
-          className="md:hidden fixed left-0 top-1/2 transform -translate-y-1/2 z-20 w-8 h-16 bg-base-200 rounded-r-lg flex items-center justify-center cursor-pointer"
+          className="md:hidden fixed left-0 top-1/2 transform -translate-y-1/2 z-20 w-6 h-16 bg-base-200 rounded-r-lg flex items-center justify-center cursor-pointer"
           onMouseEnter={() => setShowMobileSidebar(true)}
         >
-          <span className="text-black font-bold">≡</span>
+          <span className="text-gray-400 font-bold">≡</span>
         </div>
 
         {/* Left Sidebar */}

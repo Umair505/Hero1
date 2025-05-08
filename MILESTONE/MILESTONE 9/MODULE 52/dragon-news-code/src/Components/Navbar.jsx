@@ -16,7 +16,7 @@ const Navbar = () => {
         });
     }
     return (
-        <div className='flex justify-between items-center py-4 px-4 md:px-0'>
+        <div className='flex justify-between items-center pt-4 px-4 md:px-0'>
             {/* Mobile Menu Button - Only shows on small screens */}
             <div className='md:hidden'>
                 <button 
@@ -65,7 +65,7 @@ const Navbar = () => {
             {/* Login Section */}
             <div className='flex items-center gap-3'>
                 <img 
-                    className=' w-12 rounded-full hidden sm:block' 
+                    className=' w-10 rounded-full hidden sm:block' 
                     src={`${user ? user.photoURL : userIcon }`} 
                     alt="User" 
                 />
