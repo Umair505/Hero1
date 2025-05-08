@@ -10,12 +10,13 @@ const NewsDetails = () => {
     const [news,setNews] = useState({});
     console.log(news);
     useEffect(()=>{
+        window.scrollTo(0, 0);
         const newsDetails =data.find(singleNews =>singleNews.id == id);
         setNews(newsDetails);
     },[data,id])
     return (
         <div>
-            <header className=''>
+            <header>
                 <Header></Header>
             </header>
             <main className='w-11/12 mx-auto gap-3 py-10 grid grid-cols-12'>
