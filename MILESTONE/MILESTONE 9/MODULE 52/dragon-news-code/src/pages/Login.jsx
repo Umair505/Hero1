@@ -1,10 +1,13 @@
-import { use } from "react";
-import { Link } from "react-router";
+import { use, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 
 
 const Login = () => {
+  const [error,setError] = useState("");
   const {signIn} = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleLogin = (e)=>{
     e.preventDefault();
     const form = e.target;
@@ -14,12 +17,12 @@ const Login = () => {
     signIn(email,password)
     .then(result =>{
       const user = result.user;
-      console.log(user);
+      navigate(`${location.state? location.state :"/"}`);
     })
     .catch((error) =>{
       const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorMessage,errorCode);
+      // const errorMessage = error.message;
+      setError(errorCode);
     });
 
   }
@@ -36,6 +39,7 @@ const Login = () => {
             type="email"
             className="input input-md w-full"
             placeholder="Email"
+            required
           />
         </div>
         <div>
@@ -45,11 +49,15 @@ const Login = () => {
             type="password"
             className="input input-md w-full"
             placeholder="Password"
+            required
           />
         </div>
         <div className="text-right">
           <a className="link link-hover text-sm">Forgot password?</a>
         </div>
+
+        {error && <p className="text-red-400 text-sm">{error}</p>}
+
         <button type="submit" className="btn btn-neutral w-full">Login</button>
         <p className="text-sm pt-2 text-center">
           Don’t have an account?
