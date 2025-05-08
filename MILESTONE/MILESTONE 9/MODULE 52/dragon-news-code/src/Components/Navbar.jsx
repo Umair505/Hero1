@@ -17,8 +17,6 @@ const Navbar = () => {
     }
     return (
         <div className='flex justify-between items-center py-4 px-4 md:px-0'>
-            <div className=''>{user && user.email}</div>
-            
             {/* Mobile Menu Button - Only shows on small screens */}
             <div className='md:hidden'>
                 <button 

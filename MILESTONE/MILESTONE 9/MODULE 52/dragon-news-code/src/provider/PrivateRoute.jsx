@@ -1,15 +1,13 @@
 import React, { use } from 'react';
 import { AuthContext } from './AuthProvider';
 import { Navigate, useLocation } from 'react-router';
+import Loading from '../Components/Loading';
 
 const PrivateRoute = ({children}) => {
     const {user,loading} = use(AuthContext);
-    console.log(user);
     if (loading) {
         return (
-          <div className="flex justify-center items-center min-h-screen">
-            <span className="loading loading-infinity loading-xl"></span>
-          </div>
+         <Loading></Loading>
         );
       }
     const location = useLocation();

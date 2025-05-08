@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCdshSQnPt5v6bjXXky7TgRuBU82B9pfp8",
-  authDomain: "skyfire-news.firebaseapp.com",
-  projectId: "skyfire-news",
-  storageBucket: "skyfire-news.firebasestorage.app",
-  messagingSenderId: "116942164668",
-  appId: "1:116942164668:web:5344edeae41cfdf3ab36b9"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

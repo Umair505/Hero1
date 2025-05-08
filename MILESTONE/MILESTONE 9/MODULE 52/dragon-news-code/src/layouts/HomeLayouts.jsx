@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigation } from 'react-router';
 import Header from '../Components/Header';
 import LatestNews from '../Components/LatestNews';
 import Navbar from '../Components/Navbar';
 import LeftAside from '../Components/Homelayout/LeftAside';
 import RightAside from '../Components/Homelayout/RightAside';
 import Footer from '../Components/Footer';
+import Loading from '../Components/Loading';
 
 
 const HomeLayouts = () => {
   const [showMobileSidebar, setShowMobileSidebar] = useState(false);
-
+  const  {state} = useNavigation()
   return (
     <div>
       <header>
         <Header />
+        
         <section className="w-11/12 mx-auto my-3">
           <LatestNews />
         </section>
@@ -41,7 +43,7 @@ const HomeLayouts = () => {
 
         {/* Main Content */}
         <section className="col-span-1 md:col-span-6">
-          <Outlet />
+          {state == "loading" ? <Loading></Loading> : <Outlet />}
         </section>
 
         {/* Right Sidebar */}

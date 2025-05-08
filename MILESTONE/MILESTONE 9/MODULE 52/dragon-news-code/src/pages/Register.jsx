@@ -8,7 +8,6 @@ const Register = () => {
   const {createUser,setUser,updateUser} = use(AuthContext)
   const handleRegister = (e)=>{
     e.preventDefault();
-    console.log(e.target);
     const form = e.target;
     const photo = form.photo.value
     const name = form.name.value;
