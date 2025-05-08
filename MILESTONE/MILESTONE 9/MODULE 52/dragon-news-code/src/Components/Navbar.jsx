@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
-import user from "../assets/user.png";
+import React, { use, useState } from 'react';
+import userIcon from "../assets/user.png";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // Added for mobile menu
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false); // State for mobile menu
-
+    const {user} = use(AuthContext);
     return (
         <div className='flex justify-between items-center py-4 px-4 md:px-0'>
+            {/* <div className=''>{user && user.email}</div> */}
+            
             {/* Mobile Menu Button - Only shows on small screens */}
             <div className='md:hidden'>
                 <button 
@@ -57,7 +60,7 @@ const Navbar = () => {
             <div className='flex items-center gap-3'>
                 <img 
                     className='h-8 w-8 rounded-full hidden sm:block' 
-                    src={user} 
+                    src={userIcon} 
                     alt="User" 
                 />
                 <Link to="/auth/login" className='btn btn-primary px-4 sm:px-6 md:px-10 py-2 text-sm md:text-base'>
