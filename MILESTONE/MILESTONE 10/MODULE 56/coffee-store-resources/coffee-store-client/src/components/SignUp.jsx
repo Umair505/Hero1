@@ -22,7 +22,12 @@ const SignUp = () => {
                 headers:{
                     'Content-Type':'application/json',
                 },
-                body: JSON.stringify(userProfile)
+                body: JSON.stringify({
+                    email,
+                    ...userProfile,
+                    creationTime: result.user?.metadata.creationTime,
+                    lastSignInTime: result.user?.metadata.lastSignInTime,
+                })
             })
             .then(res => res.json())
             .then(data =>{
@@ -36,7 +41,7 @@ const SignUp = () => {
                         confirmButtonText: 'OK'
                     }).then(() => {
                         // Redirect to the sign-in page or home page
-                        window.location.href = '/signin';
+                        // window.location.href = '/signin';
                     });
                 }
             })
