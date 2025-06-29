@@ -1,8 +1,8 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 const JobDetails = () => {
-    const { title, location, salaryRange, jobType, category, requirements, description, company, company_logo } = useLoaderData();
+    const { title,_id, location, salaryRange, jobType, category, requirements, description, company, company_logo } = useLoaderData();
      
     return (
         <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
@@ -58,6 +58,11 @@ const JobDetails = () => {
                 <h3 className="font-semibold text-gray-800 mb-2">About {company}</h3>
                 <p className="text-gray-600">More information about the company would go here.</p>
             </div>
+           <Link to={`/apply/${_id}`} >
+            <button className="btn btn-primary  bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors duration-300">
+                            Apply Now
+            </button>
+            </Link>
         </div>
     );
 };

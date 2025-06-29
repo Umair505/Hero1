@@ -73,7 +73,7 @@ const JobCard = ({ job }) => {
                 <div className="card-actions">
                     <Link to={`/jobs/${_id}`} className="w-full">
                         <button className="btn btn-primary w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors duration-300">
-                            Apply Now
+                            Show Details
                         </button>
                     </Link>
                 </div>

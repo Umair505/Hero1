@@ -27,7 +27,7 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     const jobsCollection = client.db('career-code').collection('jobs');
-
+    const applicationsCollection =client.db('career-code').collection('applications');
     //Jobs API
     app.get('/jobs',async(req,res)=>{
         const cursor = jobsCollection.find();
@@ -44,6 +44,13 @@ async function run() {
         return res.status(404).send({message: "Job not found"});
       }
       res.send(job);
+    })
+
+    // Apply for a job
+    app.post('/applications',async(req,res)=>{
+        const application = req.body;
+        const result = await applicationsCollection.insertOne(application);
+        res.send(result);
     })
 
     // Send a ping to confirm a successful connection
