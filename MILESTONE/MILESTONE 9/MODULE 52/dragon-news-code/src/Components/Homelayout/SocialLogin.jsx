@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 
-const SocialLogin = () => {
+const SocialLogin = () => {r
     return (
         <div>
             <h2 className='font-bold mb-5'>Login With</h2>
