@@ -2,13 +2,33 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
+const cookieParser = require('cookie-parser');
+
+//JSON WEB TOKEN
+const jwt = require('jsonwebtoken');
+
+
 require('dotenv').config();
 
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.aerwfuu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
-app.use(cors());
+app.use(cors({
+  origin:['http://localhost:5173'],
+  credentials:true//allow cookies
+}));
 app.use(express.json());
 
+app.use(cookieParser()); // Middleware to parse cookies
+
+const logger = (req,res,next)=>{
+  console.log("Inside logger middleware");
+  next();
+}
+
+const verifyToken = (req,res,next)=>{
+  const token = req?.cookies?.token;
+  console.log("Token from cookies:", token);
+}
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
@@ -28,6 +48,22 @@ async function run() {
     await client.connect();
     const jobsCollection = client.db('career-code').collection('jobs');
     const applicationsCollection =client.db('career-code').collection('applications');
+
+    //JWT Token Related API
+    app.post('/jwt',(req,res)=>{
+      const userData = req.body;
+      const token = jwt.sign(userData,process.env.JWT_SECRET,{expiresIn:'1d'});
+     
+      //Set the token in a cookie
+      res.cookie('token', token, {
+        httpOnly: true, // Make the cookie HTTP-only
+        secure: false
+      });
+      
+     
+      res.send({success:true})
+    })
+
     //Jobs API
     app.get('/jobs',async(req,res)=>{
         const cursor = jobsCollection.find();
@@ -44,6 +80,29 @@ async function run() {
         return res.status(404).send({message: "Job not found"});
       }
       res.send(job);
+    })
+
+    app.get('/applications',logger,verifyToken,async(req,res)=>{
+      const email = req.query.email;
+
+      // console.log("Inside application",req.cookies);
+
+      const query = {
+        applicant:email
+      }
+      const result = await applicationsCollection.find(query).toArray();
+     
+
+      //Bad way to aggregate data
+      for(const application of result){
+        const jobId = application.jobId;
+        const jobQuery = {_id:new ObjectId(jobId)};
+        const job = await jobsCollection.findOne(jobQuery);
+        application.company = job.company;
+        application.jobTitle = job.title;
+        application.company_logo = job.company_logo;
+      }
+       res.send(result);
     })
 
     // Apply for a job

@@ -1,0 +1,4 @@
+In terminal:
+for generating secret key
+node
+require('crypto').randomBytes(64).toString('hex')
