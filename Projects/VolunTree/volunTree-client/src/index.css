@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Navbar Outline Animation */
+.nav-container {
+  position: relative;
+  height: 100%;
+}
+
+.outline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rect {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s;
+  stroke: rgb(5, 127, 104);
+}
+
+.container:hover .outline .rect {
+  transition: 999999s;
+  stroke-dashoffset: 1;
+  stroke-dasharray: 0;
+}
+
+.btn:hover ~ .outline .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s !important;
+}
+
+/* Adjust these values based on your actual nav items */
+.nav-container .container a:nth-child(1):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 2 8 73.3 8 10.7;
+}
+
+.nav-container .container a:nth-child(2):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 12.6 9.5 49.3 9.5 31.6;
+}
+
+.nav-container .container a:nth-child(3):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 24.5 8.5 27.5 8.5 55.5;
+}
+
+.nav-container .container a:nth-child(4):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 34.7 6.9 10.2 6.9 76;
+}

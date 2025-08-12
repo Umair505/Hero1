@@ -24,8 +24,8 @@ const JobApply = () => {
         .then(res=>{
             console.log("Application submitted successfully", res.data);
             Swal.fire({
-  title: "Good job!",
-  text: "You clicked the button!",
+  title: "Thanks For Applying The Job!",
+  text: "Your application has been submitted successfully!",
   icon: "success"
 });
         })

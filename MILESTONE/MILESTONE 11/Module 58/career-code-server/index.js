@@ -20,14 +20,20 @@ app.use(express.json());
 
 app.use(cookieParser()); // Middleware to parse cookies
 
-const logger = (req,res,next)=>{
-  console.log("Inside logger middleware");
-  next();
-}
 
 const verifyToken = (req,res,next)=>{
   const token = req?.cookies?.token;
+  if(!token){
+    return res.status(401).send({message:"Unauthorized access"});
+  }
   console.log("Token from cookies:", token);
+  jwt.verify(token,process.env.JWT_SECRET,(err,decoded)=>{
+    if(err){
+      return res.status(401).send({message:"Unauthorized access"})
+    }
+    req.decoded = decoded;
+    next();
+  })
 }
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
@@ -82,11 +88,14 @@ async function run() {
       res.send(job);
     })
 
-    app.get('/applications',logger,verifyToken,async(req,res)=>{
+    app.get('/applications',verifyToken,async(req,res)=>{
       const email = req.query.email;
 
       // console.log("Inside application",req.cookies);
-
+      if(email!== req.decoded.email){
+        return res.status(403).send({message:"Forbidden access"});
+      }
+      
       const query = {
         applicant:email
       }

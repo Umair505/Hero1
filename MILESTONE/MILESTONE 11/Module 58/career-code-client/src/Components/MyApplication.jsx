@@ -1,4 +1,4 @@
-import React, { Suspense, use } from 'react';
+import React, { Suspense } from 'react';
 import ApplicationStat from './ApplicationStat';
 import ApplicationList from './ApplicationList';
 import { AuthContext } from '../contexts/AuthContext/AuthContext';
@@ -13,8 +13,8 @@ const MyApplication = () => {
             <ApplicationStat />
 
             <Suspense fallback={<div>Loading...</div>}>
-                <ApplicationList myApplicationsPromise={myApplicationsPromise(user.email)}>
-                </ApplicationList>
+                <ApplicationList myApplicationsPromise={user ? myApplicationsPromise(user.email) : null} />
+
             </Suspense>
         </div>
     );
