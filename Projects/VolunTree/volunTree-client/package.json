@@ -12,9 +12,10 @@
   "dependencies": {
     "@chakra-ui/react": "^3.22.0",
     "@emotion/react": "^11.14.0",
+    "@radix-ui/react-dialog": "^1.1.15",
     "axios": "^1.10.0",
     "firebase": "^11.10.0",
-    "framer-motion": "^12.23.0",
+    "framer-motion": "^12.23.12",
     "lottie-react": "^2.4.1",
     "ogl": "^1.0.11",
     "react": "^19.1.0",

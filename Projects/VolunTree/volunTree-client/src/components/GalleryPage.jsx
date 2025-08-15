@@ -54,7 +54,7 @@ const GalleryPage = () => {
         </div>
 
         {/* Interactive Gallery */}
-        <div className="h-[70vh] w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+        <div className="h-[70vh] w-full rounded-2xl overflow-hidden ">
           <CircularGallery
             items={galleryItems}
             bend={3}

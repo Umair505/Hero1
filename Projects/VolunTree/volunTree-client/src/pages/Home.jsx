@@ -5,13 +5,16 @@ import VolunteerNeedsNow from '../components/VolunteerNeedsNow';
 import { useLoaderData } from 'react-router';
 import GalleryPage from '../components/GalleryPage';
 import FAQSection from '../components/FAQSection';
+import WhyBeAVolunteer from '../components/WhyBeAVolunteer';
 
 const Home = () => {
     const volunteerPost = useLoaderData();
     console.log(volunteerPost.data.data);
     return (
         <div>
+            
            <Carousel/>
+            <WhyBeAVolunteer/>
            <VolunteerNeedsNow volunteerPost={volunteerPost}/>
             <GalleryPage/>
            <VolunteerServices/>
