@@ -112,6 +112,19 @@ const Navbar = () => {
                       )}
                     </NavLink>
                   )}
+                  {user && (
+                    <NavLink to="/volunteer-requests" className={navLinkStyle}>
+                      {({ isActive }) => (
+                        <>
+                          <span className="relative z-10">Volunteer Requests</span>
+                          {isActive && (
+                            <div className="absolute inset-0 bg-[rgba(5,127,104,0.1)] rounded-md"></div>
+                          )}
+                        </>
+                      )}
+                    </NavLink>
+                  )}
+                  
                 </div>
 
                 
