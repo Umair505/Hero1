@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import img1 from '../assets/savePlanetRally.jpeg';
 import img2 from '../assets/togetherGrp.png';
 import img3 from '../assets/volunteer.jpg';
+import { Link } from 'react-router';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -108,6 +109,7 @@ const Carousel = () => {
                   duration: 0.8
                 }}
               >
+                <Link to="/volunteer-post">
                 <button 
                   className="mt-8 px-10 py-4 bg-[rgb(5,127,104)] hover:bg-[rgb(4,107,87)] text-white font-semibold rounded-full text-lg transition-all
                   shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300 flex items-center mx-auto"
@@ -124,6 +126,7 @@ const Carousel = () => {
                     →
                   </motion.span>
                 </button>
+                </Link>
               </motion.div>
             </div>
           </div>

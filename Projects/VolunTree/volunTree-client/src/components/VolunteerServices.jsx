@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import bg from '../assets/bg.jpg';
 import { FaHandsHelping, FaSearch, FaUserPlus } from "react-icons/fa";
+import { Link } from "react-router";
 
 const services = [
   {
@@ -92,7 +93,9 @@ const VolunteerServices = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="relative z-10">Learn More</span>
+                  <Link to="/volunteer-post">
+                   <span className="relative z-10">Make an Impact</span>
+                  </Link>
                   <motion.span
                     className="absolute inset-0 bg-white/10"
                     initial={{ x: -100, opacity: 0 }}
