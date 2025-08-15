@@ -12,6 +12,7 @@ import MyPosts from "../pages/MyPosts";
 import UpdatePage from "../pages/UpdatePage";
 import PrivateRoute from "../layouts/PrivateRoute";
 import MyVolunteerRequests from "../pages/MyVolunteerRequests";
+import AboutUsPage from "../pages/AboutUsPage";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path:'/login',
                 Component:Login
+            },
+            {
+                path:'/about-us',
+                Component:AboutUsPage
             },
             {
                 path:'/volunteer-post',
