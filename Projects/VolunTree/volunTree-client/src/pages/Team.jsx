@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const TeamMember = ({ imgSrc, name, title, description }) => {
   return (
@@ -8,11 +9,13 @@ const TeamMember = ({ imgSrc, name, title, description }) => {
       className="flex flex-col w-full sm:w-1/2 lg:w-1/3 p-4"
     >
       <div className="bg-white rounded-xl shadow-md overflow-hidden h-full border border-emerald-100">
-        <img
-          src={imgSrc}
-          alt={name}
-          className="w-full h-64 object-cover"
-        />
+        <div className="relative overflow-hidden rounded-lg aspect-square">
+            <img
+                src={imgSrc}
+                alt={name}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+        </div>
         <div className="p-6">
           <h2 className="text-xl font-bold text-emerald-800">{name}</h2>
           <p className="text-emerald-600 font-medium mt-1">{title}</p>
@@ -26,37 +29,37 @@ const TeamMember = ({ imgSrc, name, title, description }) => {
 const Team = () => {
   const teamMembers = [
     {
-      imgSrc: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
-      name: "Abdul Rahman",
+      imgSrc: "https://i.postimg.cc/bwrY3wrN/photo-2025-08-12-23-30-26.jpg",
+      name: "Moinul Islam",
       title: "Founder & Director",
       description: "Inspired by Islamic teachings on charity, he started this platform to connect volunteers with meaningful opportunities."
     },
     {
-      imgSrc: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e",
+      imgSrc: "https://i.postimg.cc/GmdYyNYq/happy-confident-muslim-business-lady-posing-outside.jpg",
       name: "Amina Khaled",
       title: "Program Coordinator",
       description: "Organizes community initiatives and ensures our projects align with Islamic values of service."
     },
     {
-      imgSrc: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5",
+      imgSrc: "https://i.postimg.cc/XYtbhM8g/businessman-dress-code-looks-motivated.jpg",
       name: "Yusuf Abdullah",
       title: "Technology Lead",
       description: "Develops our platform to make volunteering accessible to Muslims worldwide."
     },
     {
-      imgSrc: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+      imgSrc: "https://i.postimg.cc/q7ZCWvF5/international-day-education-celebration.jpg",
       name: "Fatima Al-Mansoor",
       title: "Community Outreach",
       description: "Connects with masjids and Islamic centers to expand our network of volunteers."
     },
     {
-      imgSrc: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+      imgSrc: "https://i.postimg.cc/q7gNcd7X/medium-shot-young-pastor-holding-bible.jpg",
       name: "Zainab Ibrahim",
       title: "Volunteer Trainer",
       description: "Prepares new volunteers with Islamic etiquette and practical skills for service."
     },
     {
-      imgSrc: "https://images.unsplash.com/photo-1552058544-f2b08422138a",
+      imgSrc: "https://i.postimg.cc/3N24yCxs/front-view-smiley-business-man.jpg",
       name: "Khalid Hassan",
       title: "Partnerships Manager",
       description: "Builds relationships with Muslim charities and organizations worldwide."
@@ -94,9 +97,11 @@ const Team = () => {
               <p className="text-gray-600 mb-4">
                 We're always looking for passionate Muslims to help grow our mission.
               </p>
+              <Link to='/create-post'>
               <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
                 Apply Now
               </button>
+              </Link>
             </div>
           </motion.div>
         </div>

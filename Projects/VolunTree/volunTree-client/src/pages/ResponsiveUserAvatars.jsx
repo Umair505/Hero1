@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const ResponsiveUserAvatars = () => {
   const volunteers = [
+      { src: "https://i.postimg.cc/mZ3rrnKR/photo-2025-08-13-20-10-19.jpg", name: "Moinul" },
     { src: "https://randomuser.me/api/portraits/men/32.jpg", name: "Abdullah" },
-    { src: "https://randomuser.me/api/portraits/women/44.jpg", name: "Aisha" },
-    { src: "https://randomuser.me/api/portraits/men/22.jpg", name: "Omar" },
-    { src: "https://randomuser.me/api/portraits/women/63.jpg", name: "Fatima" },
-    { src: "https://randomuser.me/api/portraits/men/41.jpg", name: "Yusuf" },
-    { src: "https://randomuser.me/api/portraits/women/50.jpg", name: "Mariam" },
+    { src: "https://i.postimg.cc/q7gNcd7X/medium-shot-young-pastor-holding-bible.jpg", name: "Omar" },
+    { src: "https://i.postimg.cc/3N24yCxs/front-view-smiley-business-man.jpg", name: "Fatima" },
+    { src: "https://i.postimg.cc/XYtbhM8g/businessman-dress-code-looks-motivated.jpg", name: "Yusuf" },
+    { src: "https://i.postimg.cc/GmdYyNYq/happy-confident-muslim-business-lady-posing-outside.jpg", name: "Mariam" },
   ];
 
   return (
@@ -24,7 +24,6 @@ const ResponsiveUserAvatars = () => {
         </h3>
         <p className="text-gray-600">
           "The believers are like one body in mutual love and compassion"
-          <span className="block text-emerald-600 mt-1">(Muslim)</span>
         </p>
       </motion.div>
 

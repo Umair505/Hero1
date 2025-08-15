@@ -4,13 +4,14 @@ import TypingText from "./TypingText";
 import ResponsiveUserAvatars from "./ResponsiveUserAvatars";
 import Team from "./Team";
 import CreatorSection from "./CreatorSection";
+import CountUp from "react-countup";
 
 const AboutUsPage = () => {
   return (
     <div className="bg-gradient-to-b from-[#f5fcf4] to-[#e0f3e8]">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519817650390-64a93db51149')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('https://i.postimg.cc/wT3QBnXJ/a-digital-illustration-of-a-flowing-abst-9-Jj-S342-VSq-Gh6t-ODRJCT1g-c64-Lzr-Sv-RKODHMayd-UH3-Tw.jpg')] bg-cover bg-center opacity-30"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <TypingText 
@@ -102,7 +103,7 @@ const AboutUsPage = () => {
               </p>
               <p className="text-gray-700 mb-4">
                 Inspired by the hadith "The best of people are those that bring most benefit to 
-                the rest of mankind," we grew organically as more Muslims sought meaningful ways 
+                the rest of mankind," we grew organically as more volunteers sought meaningful ways 
                 to serve their communities.
               </p>
               <p className="text-gray-700">
@@ -128,39 +129,45 @@ const AboutUsPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <div className="text-4xl font-bold text-emerald-600 mb-2">10K+</div>
-              <div className="text-gray-700">Volunteer Projects</div>
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <div className="text-4xl font-bold text-emerald-600 mb-2">500K+</div>
-              <div className="text-gray-700">People Helped</div>
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <div className="text-4xl font-bold text-emerald-600 mb-2">50+</div>
-              <div className="text-gray-700">Countries</div>
-            </motion.div>
-            
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <div className="text-4xl font-bold text-emerald-600 mb-2">24/7</div>
-              <div className="text-gray-700">Service Available</div>
-            </motion.div>
-          </div>
+          <div className="grid md:grid-cols-4 gap-6 px-4">
+  <motion.div 
+    whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(5, 127, 104, 0.2)" }}
+    className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transition-all duration-300"
+  >
+    <div className="text-5xl font-bold text-emerald-600 mb-3">
+      <CountUp end={10000} duration={2.5} separator="," prefix="+" />
+    </div>
+    <div className="text-gray-600 font-medium">Volunteer Projects</div>
+  </motion.div>
+  
+  <motion.div 
+    whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(5, 127, 104, 0.2)" }}
+    className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transition-all duration-300"
+  >
+    <div className="text-5xl font-bold text-emerald-600 mb-3">
+      <CountUp end={500000} duration={3} separator="," prefix="+" />
+    </div>
+    <div className="text-gray-600 font-medium">People Helped</div>
+  </motion.div>
+  
+  <motion.div 
+    whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(5, 127, 104, 0.2)" }}
+    className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transition-all duration-300"
+  >
+    <div className="text-5xl font-bold text-emerald-600 mb-3">
+      <CountUp end={50} duration={1.5} separator="," prefix="+" />
+    </div>
+    <div className="text-gray-600 font-medium">Countries</div>
+  </motion.div>
+  
+  <motion.div 
+    whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(5, 127, 104, 0.2)" }}
+    className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 transition-all duration-300"
+  >
+    <div className="text-5xl font-bold text-emerald-600 mb-3">24/7</div>
+    <div className="text-gray-600 font-medium">Service Available</div>
+  </motion.div>
+</div>
         </div>
       </section>
 
@@ -176,7 +183,7 @@ const AboutUsPage = () => {
               transition={{ duration: 0.8 }}
             >
               <h3 className="text-2xl font-semibold text-emerald-800 mb-6">
-                A Global Muslim Community
+                A Global  Community
               </h3>
               <p className="text-gray-700 mb-4">
                 Our volunteers come from all walks of life, united by their faith and desire to serve. 
@@ -218,7 +225,7 @@ const AboutUsPage = () => {
             Ready to Make a Difference?
           </h2>
           <p className="text-xl mb-8">
-            Join thousands of Muslims serving their communities as an act of worship
+            Join thousands of volunteers serving their communities as an act of worship
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
