@@ -49,7 +49,7 @@ const VolunteerNeedsNow = ({ volunteerPost }) => {
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#eaf5f2]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}

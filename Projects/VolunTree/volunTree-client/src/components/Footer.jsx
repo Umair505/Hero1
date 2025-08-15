@@ -4,7 +4,7 @@ import logo from '../../src/assets/logo.png'
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white px-6 md:px-12 py-10 ">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl  mx-auto">
         {/* Top text */}
         <div className="text-center text-lg md:text-xl font-medium mb-10">
           Small acts, big impact – start your journey today.

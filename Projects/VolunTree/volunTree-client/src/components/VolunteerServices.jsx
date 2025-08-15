@@ -27,13 +27,13 @@ const services = [
 const VolunteerServices = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat px-4 py-16 relative overflow-hidden"
+      className="min-h-screen  bg-cover bg-center bg-no-repeat px-4 py-16 relative overflow-hidden"
       style={{ backgroundImage: `url(${bg})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 "></div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}

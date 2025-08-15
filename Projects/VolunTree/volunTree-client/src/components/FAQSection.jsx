@@ -37,7 +37,7 @@ const FAQSection = () => {
         <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-teal-50 opacity-30"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
         {/* Left Section - Floating Image with smaller static image */}
         <motion.div
           className="relative w-full lg:w-1/2 flex flex-col items-center gap-8"
