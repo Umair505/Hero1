@@ -48,7 +48,7 @@ const VolunteerNeedsNow = ({ volunteerPost }) => {
     );
 
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#eaf5f2]">
+   <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#f2f9f1] to-[#e8f5e9]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <motion.h2
@@ -77,66 +77,68 @@ const VolunteerNeedsNow = ({ volunteerPost }) => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {posts.map((post) => (
-              <motion.div
-                key={post._id}
-                variants={cardVariants}
-                whileHover="hover"
-                className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300"
-              >
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={
-                      post.thumbnail ||
-                      "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
-                    }
-                    alt={post.title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
+  <motion.div
+    key={post._id}
+    variants={cardVariants}
+    whileHover="hover"
+    initial="hidden"
+    animate="visible"
+    className="group bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:border-[rgb(5,127,104,0.2)]"
+  >
+    {/* Image with gradient overlay */}
+    <div className="relative h-56 overflow-hidden">
+      <img
+        src={post.thumbnail || "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"}
+        alt={post.title}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
+      <div className="absolute bottom-4 left-4">
+        <span className="px-3 py-1 bg-white/90 text-[rgb(5,127,104)] rounded-full text-sm font-semibold shadow-md backdrop-blur-sm">
+          {post.category}
+        </span>
+      </div>
+    </div>
 
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-2">
-                    <span className="px-3 py-1 bg-[rgb(5,127,104,0.1)] text-[rgb(5,127,104)] rounded-full text-sm font-medium">
-                      {post.category}
-                    </span>
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <FiClock className="mr-1" />
-                      {new Date(post.deadline).toLocaleDateString()}
-                    </div>
-                  </div>
+    {/* Card Content */}
+    <div className="p-6 relative">
+      {/* Floating date badge */}
+      <div className="absolute -top-5 right-6 bg-white px-3 py-2 rounded-lg shadow-md border border-gray-100 flex items-center text-gray-700 text-sm font-medium">
+        <FiClock className="mr-1.5 text-[rgb(5,127,104)]" />
+        {new Date(post.deadline).toLocaleDateString()}
+      </div>
 
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h3>
+      <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[rgb(5,127,104)] transition-colors duration-300">
+        {post.title}
+      </h3>
 
-                  <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    whileHover={{
-                      scale: 1.02,
-                      backgroundColor: "rgb(3, 84, 63)", // Darker shade on hover
-                      boxShadow: "0 4px 12px rgba(5, 127, 104, 0.3)",
-                    }}
-                    onClick={() => navigate(`/volunteer-need-post/${post._id}`)}
-                    className="w-full flex items-center justify-center px-4 py-2 
-             bg-[rgb(5,127,104)] text-white rounded-lg font-medium 
-             transition-all duration-300 ease-in-out
-             hover:text-gray-100 hover:shadow-lg"
-                  >
-                    <span className="relative group">
-                      View Details
-                      <span
-                        className="absolute left-0 bottom-0 w-0 h-0.5 bg-white 
-                    group-hover:w-full transition-all duration-300"
-                      ></span>
-                    </span>
-                    <FiArrowRight
-                      className="ml-2 transition-transform duration-300 
-                          group-hover:translate-x-1"
-                    />
-                  </motion.button>
-                </div>
-              </motion.div>
-            ))}
+      <p className="text-gray-600 mb-5 line-clamp-2 text-sm">
+        {post.description?.substring(0, 100)}...
+      </p>
+
+      <motion.button
+        whileTap={{ scale: 0.95 }}
+        whileHover={{
+          scale: 1.02,
+          backgroundColor: "rgb(3, 84, 63)",
+          boxShadow: "0 8px 20px rgba(5, 127, 104, 0.4)",
+        }}
+        onClick={() => navigate(`/volunteer-need-post/${post._id}`)}
+        className="w-full flex items-center justify-center px-6 py-3 
+        bg-gradient-to-r from-[rgb(5,127,104)] to-[rgb(7,156,128)] 
+        text-white rounded-xl font-semibold text-sm
+        transition-all duration-300 ease-in-out
+        hover:shadow-lg relative overflow-hidden"
+      >
+        <span className="relative z-10 flex items-center">
+          View Details
+          <FiArrowRight className="ml-2 transition-all duration-300 group-hover:translate-x-1" />
+        </span>
+        <span className="absolute inset-0 bg-gradient-to-r from-[rgb(7,156,128)] to-[rgb(5,127,104)] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+      </motion.button>
+    </div>
+  </motion.div>
+))}
           </motion.div>
         ) : (
           <div className="text-center py-10 text-gray-500">
