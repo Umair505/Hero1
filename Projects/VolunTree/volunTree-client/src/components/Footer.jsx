@@ -84,7 +84,7 @@ const Footer = () => {
         {/* Bottom line */}
         <div className="mt-10 border-t border-gray-700 pt-4 text-center text-gray-500 text-xs">
   &copy; {new Date().getFullYear()} VolunTree. All rights reserved. Developed by <a 
-  href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" 
+  href="https://github.com/Umair505" 
   target="_blank" 
   rel="noopener noreferrer" 
   className="text-white font-medium"

@@ -5,6 +5,7 @@ import ResponsiveUserAvatars from "./ResponsiveUserAvatars";
 import Team from "./Team";
 import CreatorSection from "./CreatorSection";
 import CountUp from "react-countup";
+import { Link } from "react-router";
 
 const AboutUsPage = () => {
   return (
@@ -339,6 +340,7 @@ const AboutUsPage = () => {
             Join thousands of volunteers serving their communities as an act of
             worship
           </p>
+          <Link to="/volunteer-post">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -346,6 +348,7 @@ const AboutUsPage = () => {
           >
             Become a Volunteer Today
           </motion.button>
+          </Link>
         </div>
       </section>
     </div>
