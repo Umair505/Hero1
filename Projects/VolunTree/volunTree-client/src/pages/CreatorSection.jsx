@@ -12,7 +12,6 @@ const CreatorSection = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-emerald-800 mb-4">Words From Our Founder</h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-emerald-400 to-teal-400 mx-auto rounded-full"></div>
         </div>
 
         <div className="bg-white rounded-2xl p-2 shadow-xl border border-emerald-100 overflow-hidden">

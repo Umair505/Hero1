@@ -183,7 +183,7 @@ const AboutUsPage = () => {
               transition={{ duration: 0.8 }}
             >
               <h3 className="text-2xl font-semibold text-emerald-800 mb-6">
-                A Global  Community
+                A Global Volunteer Community
               </h3>
               <p className="text-gray-700 mb-4">
                 Our volunteers come from all walks of life, united by their faith and desire to serve. 
@@ -199,7 +199,7 @@ const AboutUsPage = () => {
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                src="https://i.postimg.cc/cHGCYttw/Community.jpg"
                 alt="Diverse Community"
                 className="rounded-xl shadow-xl w-full h-auto"
               />
