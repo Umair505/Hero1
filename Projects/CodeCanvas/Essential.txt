@@ -1,0 +1,19 @@
+For only 50 marks: ms_scic#Ass-12#&marks50#
+
+Client Site Repo:https://github.com/Programming-Hero-Web-Course4/b11a12-client-side-Umair505
+Server Site Repo:https://github.com/Programming-Hero-Web-Course4/b11a12-server-side-Umair505.git
+Client Live :
+Netlify: https://codecanvas-moinul.netlify.app/
+Firebase: https://plantify-moinul.web.app/
+
+Server Live :https://codecanvas-alpha.vercel.app/
+
+
+Admin:
+mail:daud@gmail.com
+Pass:Naim1234
+
+Moderator:
+mail:jackson@gmail.com
+Pass:Naim1234
+
